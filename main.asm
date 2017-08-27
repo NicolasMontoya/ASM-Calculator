@@ -288,25 +288,15 @@ SignNeg2:		LDA #1
 			
 										
 Here:	
-		
+	LDA #$3D
+	JSR LCD_DATA	
 	LDA Sign
 	CMP #0
 	BEQ Listos
 	ADD #$2C
 	JSR LCD_DATA
-	
-Listos:	
-		LDA #$3D
-		JSR LCD_DATA
-		JSR SHOW_RESULT
-					
-			
-
-
+Listos:	JSR SHOW_RESULT
 Final:	BRA Final
-
-
-
 
 		
 
